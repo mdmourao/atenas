@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atenas 2026</title>
+<meta name="description" content="Guia de bolso da viagem a Atenas, 3 a 9 de outubro de 2026.">
+<meta name="theme-color" content="#0d4a8a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ec;
+  --card: #ffffff;
+  --ink: #1c2430;
+  --muted: #5e6875;
+  --line: #e6dfd3;
+  --accent: #0d4a8a;
+  --accent-soft: #e3edf8;
+  --gold: #b9852f;
+  --warn-bg: #fff3d6;
+  --warn-ink: #7a5300;
+  --done: #2f7d4f;
+  --shadow: 0 1px 2px rgba(28,36,48,.06), 0 2px 8px rgba(28,36,48,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11161d;
+    --card: #1a212b;
+    --ink: #e9edf2;
+    --muted: #9aa5b3;
+    --line: #2a3340;
+    --accent: #7fb3ec;
+    --accent-soft: #1d2d42;
+    --gold: #d9ab5c;
+    --warn-bg: #3a2f14;
+    --warn-ink: #f2d38a;
+    --done: #6cc895;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+
+header.top {
+  background: var(--accent);
+  color: #fff;
+  padding: calc(18px + env(safe-area-inset-top)) 0 14px;
+}
+@media (prefers-color-scheme: dark) { header.top { background: #0b2a4d; } }
+header.top h1 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: -.01em;
+}
+header.top p { margin: 2px 0 0; opacity: .85; font-size: 14px; }
+
+nav.days {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+nav.days .row {
+  display: flex; gap: 8px;
+  overflow-x: auto;
+  padding: 10px 16px;
+  max-width: 680px; margin: 0 auto;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+}
+nav.days .row::-webkit-scrollbar { display: none; }
+nav.days button {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font: 600 14px/1 Inter, system-ui, sans-serif;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+}
+nav.days button[aria-selected="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  nav.days button[aria-selected="true"] { color: #0b1a2c; }
+}
+nav.days button .hoje {
+  position: absolute; top: -6px; right: -4px;
+  background: var(--gold); color: #fff;
+  font-size: 10px; padding: 2px 5px; border-radius: 6px;
+}
+
+.day-head { padding: 18px 0 6px; }
+.day-head h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 24px; margin: 0 0 4px;
+}
+.day-head p { margin: 0; color: var(--muted); }
+.progress { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.aviso {
+  margin: 12px 0 0;
+  background: var(--warn-bg); color: var(--warn-ink);
+  padding: 10px 12px; border-radius: 10px;
+  font-weight: 600; font-size: 14px;
+}
+
+ol.cards { list-style: none; margin: 12px 0 32px; padding: 0; display: grid; gap: 10px; }
+
+details.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+details.card summary {
+  list-style: none;
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+details.card summary::-webkit-details-marker { display: none; }
+.ico {
+  flex: 0 0 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  font-size: 20px;
+}
+.sum-text { flex: 1; min-width: 0; }
+.sum-text h3 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.3; }
+.sum-text .linha { margin: 2px 0 0; color: var(--muted); font-size: 14px; line-height: 1.35; }
+.hora {
+  display: inline-block; margin-right: 6px;
+  font-size: 12px; font-weight: 600;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 1px 7px; border-radius: 6px;
+  vertical-align: 1px;
+}
+.chev {
+  flex: 0 0 auto; color: var(--muted);
+  transition: transform .2s;
+}
+details[open] .chev { transform: rotate(180deg); }
+.card.visited .ico { background: var(--done); color: #fff; }
+.card.visited .sum-text h3 { color: var(--muted); }
+
+.body { padding: 0 14px 14px; border-top: 1px solid var(--line); }
+.body .lbl {
+  font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--gold); margin: 14px 0 4px;
+}
+.body p { margin: 0; }
+.body ul { margin: 0; padding-left: 20px; }
+.body li { margin: 4px 0; }
+.body li::marker { color: var(--gold); }
+.dica {
+  margin-top: 12px;
+  background: var(--accent-soft);
+  border-radius: 10px; padding: 10px 12px;
+  font-size: 15px;
+}
+.actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.btn {
+  flex: 1 1 140px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 0 14px;
+  border-radius: 10px;
+  font: 600 15px/1 Inter, system-ui, sans-serif;
+  text-decoration: none; cursor: pointer;
+  border: 1px solid var(--accent);
+}
+.btn.maps { background: var(--accent); color: #fff; }
+@media (prefers-color-scheme: dark) { .btn.maps { color: #0b1a2c; } }
+.btn.check { background: transparent; color: var(--accent); }
+.card.visited .btn.check { border-color: var(--done); color: var(--done); }
+
+footer { color: var(--muted); font-size: 13px; text-align: center; padding: 8px 16px 32px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Atenas 🇬🇷</h1>
+    <p>3 a 9 de outubro de 2026 · guia de bolso</p>
+  </div>
+</header>
+
+<nav class="days" aria-label="Dias da viagem">
+  <div class="row" role="tablist" id="tabs"></div>
+</nav>
+
+<main class="wrap" id="dia"></main>
+
+<footer>Toquem num local para abrir a história. Horários e preços podem mudar: confirmem no próprio dia.</footer>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  var ICONS = { monumento: "🏛️", museu: "🏺", bairro: "🏘️", comida: "🍽️", vista: "🌅", transporte: "✈️", dica: "💡" };
+  var tabs = document.getElementById("tabs");
+  var main = document.getElementById("dia");
+
+  function store(get, key, val) {
+    try {
+      if (get) return JSON.parse(localStorage.getItem(key) || "null");
+      localStorage.setItem(key, JSON.stringify(val));
+    } catch (e) { return null; }
+  }
+  var visited = store(true, "atenas-visitados") || {};
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function mapsUrl(q) {
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+  }
+  function todayIso() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+
+  var hoje = todayIso();
+
+  DIAS.forEach(function (d) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.id = "tab-" + d.id;
+    b.innerHTML = esc(d.curto) + (d.data === hoje ? '<span class="hoje">hoje</span>' : "");
+    b.addEventListener("click", function () { show(d.id, true); });
+    tabs.appendChild(b);
+  });
+
+  function card(dia, l, i) {
+    var key = dia.id + ":" + i;
+    var html = '<li><details class="card' + (visited[key] ? " visited" : "") + '" data-key="' + key + '">';
+    html += "<summary>";
+    html += '<span class="ico" aria-hidden="true">' + (visited[key] ? "✓" : ICONS[l.tipo] || "📍") + "</span>";
+    html += '<span class="sum-text"><h3>' + esc(l.nome) + "</h3>";
+    html += '<p class="linha">' + (l.hora ? '<span class="hora">' + esc(l.hora) + "</span>" : "") + esc(l.linha || "") + "</p></span>";
+    html += '<svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+    html += "</summary><div class=\"body\">";
+    if (l.historia) html += '<div class="lbl">História</div><p>' + esc(l.historia) + "</p>";
+    if (l.factos && l.factos.length) {
+      html += '<div class="lbl">' + (l.historia ? "Factos" : "A saber") + "</div><ul>";
+      l.factos.forEach(function (f) { html += "<li>" + esc(f) + "</li>"; });
+      html += "</ul>";
+    }
+    if (l.dica) html += '<div class="dica">💡 ' + esc(l.dica) + "</div>";
+    html += '<div class="actions">';
+    if (!l.semMapa) html += '<a class="btn maps" target="_blank" rel="noopener" href="' + mapsUrl(l.maps || l.nome) + '">📍 Ver no Maps</a>';
+    html += '<button type="button" class="btn check">' + (visited[key] ? "✓ Visitado" : "Marcar como visto") + "</button>";
+    html += "</div></div></details></li>";
+    return html;
+  }
+
+  function show(id, fromClick) {
+    var dia = DIAS.filter(function (d) { return d.id === id; })[0] || DIAS[0];
+    Array.prototype.forEach.call(tabs.children, function (b) {
+      var sel = b.id === "tab-" + dia.id;
+      b.setAttribute("aria-selected", sel);
+      if (sel && b.scrollIntoView) b.scrollIntoView({ inline: "center", block: "nearest" });
+    });
+    var html = '<section class="day-head"><h2>' + esc(dia.titulo) + "</h2><p>" + esc(dia.resumo) + "</p>";
+    html += '<div class="progress" id="prog"></div>';
+    if (dia.aviso) html += '<div class="aviso">⚠️ ' + esc(dia.aviso) + "</div>";
+    html += '</section><ol class="cards">';
+    dia.locais.forEach(function (l, i) { html += card(dia, l, i); });
+    html += "</ol>";
+    main.innerHTML = html;
+    progress(dia);
+    if (history.replaceState) history.replaceState(null, "", "#" + dia.id);
+    if (fromClick) window.scrollTo(0, 0);
+  }
+
+  function progress(dia) {
+    var n = dia.locais.filter(function (l, i) { return visited[dia.id + ":" + i]; }).length;
+    var p = document.getElementById("prog");
+    if (p) p.textContent = n ? n + " de " + dia.locais.length + " vistos" : dia.locais.length + " locais";
+  }
+
+  main.addEventListener("click", function (e) {
+    var btn = e.target.closest(".btn.check");
+    if (!btn) return;
+    var det = btn.closest("details.card");
+    var key = det.getAttribute("data-key");
+    if (visited[key]) delete visited[key]; else visited[key] = true;
+    store(false, "atenas-visitados", visited);
+    var on = !!visited[key];
+    det.classList.toggle("visited", on);
+    btn.textContent = on ? "✓ Visitado" : "Marcar como visto";
+    var dia = DIAS.filter(function (d) { return d.id === key.split(":")[0]; })[0];
+    var l = dia.locais[+key.split(":")[1]];
+    det.querySelector(".ico").textContent = on ? "✓" : ICONS[l.tipo] || "📍";
+    progress(dia);
+  });
+
+  var start = location.hash.slice(1);
+  if (!DIAS.some(function (d) { return d.id === start; })) {
+    var t = DIAS.filter(function (d) { return d.data === hoje; })[0];
+    start = t ? t.id : DIAS[0].id;
+  }
+  show(start, false);
+})();
+</script>
+</body>
+</html>
