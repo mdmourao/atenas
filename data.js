@@ -1,5 +1,6 @@
 // Conteúdo do guia. Cada dia tem uma lista de locais (cartões).
-// tipo: monumento | museu | bairro | comida | vista | transporte | dica
+// tipo: monumento | museu | bairro | comida | vista | transporte | dica | mito
+// extras: cartões opcionais mostrados em baixo do dia ("Extras na zona")
 // maps: texto a pesquisar no Google Maps (se faltar, usa o nome)
 
 const DIAS = [
@@ -36,6 +37,31 @@ const DIAS = [
           "To logariasmó, parakaló (a conta, por favor)"
         ],
         dica: "Cuidado: «Ne» quer dizer SIM. É normal oferecerem água e uma sobremesa no fim da refeição."
+      }
+    ],
+    extras: [
+      {
+        nome: "Areópago ao fim do dia",
+        tipo: "vista",
+        linha: "Rochedo junto à Acrópole, de acesso livre",
+        maps: "Areopagus Hill Athens",
+        historia: "A «colina de Ares» foi o tribunal mais antigo de Atenas. Diz o mito que aqui os deuses julgaram Ares por ter matado um filho de Poseidon, e mais tarde Orestes, por ter matado a mãe.",
+        factos: [
+          "O apóstolo São Paulo pregou aqui aos atenienses por volta do ano 51. O discurso está gravado numa placa de bronze ao pé da escada.",
+          "Vê-se a Acrópole de muito perto e a cidade toda à volta."
+        ],
+        dica: "Se chegarem a tempo, o pôr do sol é por volta das 19h. A pedra é muito lisa e escorrega: cuidado com os sapatos."
+      },
+      {
+        nome: "Primeiro jantar: salada grega",
+        tipo: "comida",
+        linha: "Horiatiki, a salada «da aldeia»",
+        semMapa: true,
+        historia: "A salada grega verdadeira não tem alface: é tomate, pepino, cebola roxa, pimento, azeitonas Kalamata e uma fatia inteira de feta por cima, com orégãos e azeite.",
+        factos: [
+          "O feta tem denominação de origem: só é feta se for feito na Grécia, com leite de ovelha (e até 30% de cabra).",
+          "Molhem o pão no azeite que fica no fundo. Os gregos fazem isso!"
+        ]
       }
     ]
   },
@@ -137,6 +163,34 @@ const DIAS = [
         ],
         dica: "Peçam vários pratos para o centro da mesa e vão pedindo mais. A Praça Iroon é o centro do bairro."
       }
+    ],
+    extras: [
+      {
+        nome: "Trilogia Neoclássica",
+        tipo: "monumento",
+        linha: "Academia, Universidade e Biblioteca, lado a lado",
+        maps: "Academy of Athens",
+        historia: "Três edifícios do séc. XIX na rua Panepistimiou, a caminho do Museu Arqueológico. Foram desenhados por dois irmãos dinamarqueses, Christian e Theophil Hansen, para mostrar que a Grécia moderna era herdeira da antiga.",
+        factos: [
+          "À frente da Academia há duas colunas altas com Atena e Apolo no topo.",
+          "Sentados na escadaria estão Platão e Sócrates em mármore.",
+          "A Academia tem o nome da escola de Platão, fundada em Atenas por volta de 387 a.C."
+        ],
+        dica: "Ficam no caminho entre Kolonaki/Syntagma e o museu. Vale a pena ver por fora."
+      },
+      {
+        nome: "Museu de Arte Cicládica",
+        tipo: "museu",
+        linha: "As figuras brancas que inspiraram Picasso",
+        maps: "Museum of Cycladic Art Athens",
+        historia: "Em Kolonaki. Mostra figuras de mármore das ilhas Cíclades com mais de 4 500 anos: rostos lisos, braços cruzados, formas muito simples.",
+        factos: [
+          "Pareciam tão modernas que influenciaram artistas do séc. XX como Picasso, Modigliani e Brâncuși.",
+          "Ninguém sabe ao certo para que serviam. Muitas foram encontradas em túmulos.",
+          "É pequeno: uma hora chega."
+        ],
+        dica: "Boa alternativa se o Museu Arqueológico for demasiado grande ou estiver cheio."
+      }
     ]
   },
   {
@@ -155,7 +209,8 @@ const DIAS = [
         factos: [
           "A Stoa de Átalo, uma galeria de 115 m, foi reconstruída nos anos 1950 e hoje é o museu da Ágora.",
           "A Via Panatenaica atravessa a Ágora e sobe até à Acrópole.",
-          "No museu há boletins de voto antigos (ostraka) usados para expulsar políticos da cidade."
+          "No museu há boletins de voto antigos (ostraka) usados para expulsar políticos da cidade.",
+          "Foi num tribunal da Ágora que Sócrates foi condenado à morte em 399 a.C., acusado de corromper os jovens. Bebeu cicuta."
         ],
         dica: "O Templo de Hefesto fica dentro da Ágora, com o mesmo bilhete."
       },
@@ -264,6 +319,44 @@ const DIAS = [
         ],
         dica: "Cheguem 30 min antes do pôr do sol para apanhar lugar. Confirmar se o funicular está a funcionar."
       }
+    ],
+    extras: [
+      {
+        nome: "Biblioteca de Adriano",
+        tipo: "monumento",
+        linha: "Ruínas romanas mesmo em Monastiraki",
+        maps: "Hadrian's Library Athens",
+        historia: "Construída por Adriano em 132 d.C. Era um grande pátio com jardim e lago, rodeado de colunas, com salas para guardar rolos de papiro e para leitura.",
+        factos: [
+          "A fachada com colunas coríntias vê-se da própria Praça Monastiraki.",
+          "Lá dentro há restos de três igrejas construídas umas sobre as outras ao longo dos séculos."
+        ],
+        dica: "Fica entre a Ágora Romana e a Praça Monastiraki: é só espreitar ao passar."
+      },
+      {
+        nome: "Pequena Metrópole",
+        tipo: "monumento",
+        linha: "A igreja feita de pedaços de templos",
+        maps: "Panagia Gorgoepikoos Athens",
+        historia: "Igreja bizantina minúscula (séc. XII) ao lado da grande Catedral de Atenas. Foi construída com pedras reaproveitadas de monumentos antigos.",
+        factos: [
+          "Nas paredes há relevos antigos e cristãos misturados, incluindo um calendário grego com os meses e as festas.",
+          "A Catedral ao lado (Mitrópoli) é onde se fazem os grandes funerais e casamentos do país."
+        ],
+        dica: "Fica na Praça Mitropoleos, a meio caminho entre Monastiraki e Syntagma."
+      },
+      {
+        nome: "Zappeion",
+        tipo: "monumento",
+        linha: "O palácio das primeiras Olimpíadas modernas",
+        maps: "Zappeion Athens",
+        historia: "Construído para ressuscitar os Jogos Olímpicos, com dinheiro dos primos Zappas, e inaugurado em 1888. Nos Jogos de 1896 foi a sala de esgrima.",
+        factos: [
+          "Em 1979 assinou-se aqui a adesão da Grécia à Comunidade Europeia.",
+          "O pátio circular com colunas está aberto e é de entrada livre."
+        ],
+        dica: "Fica na ponta sul dos Jardins Nacionais, a caminho do Templo de Zeus."
+      }
     ]
   },
   {
@@ -283,7 +376,8 @@ const DIAS = [
         factos: [
           "Entra-se pelos Propileus, a porta monumental construída entre 437 e 432 a.C.",
           "É Património Mundial da UNESCO desde 1987.",
-          "Os blocos com que tropeçam no chão estão numerados para o restauro."
+          "Os blocos com que tropeçam no chão estão numerados para o restauro.",
+          "As obras de Péricles foram pagas com o tesouro da Liga de Delos, dinheiro das cidades aliadas para a defesa contra os persas. Os aliados não gostaram nada."
         ],
         dica: "Ir às 8h evita as filas e o calor. O bilhete é com hora marcada: comprem online antes. Levem água e sapatos que agarrem (o mármore escorrega)."
       },
@@ -408,6 +502,33 @@ const DIAS = [
           "Experimentem também os loukoumades: bolinhas de massa frita com mel e canela."
         ]
       }
+    ],
+    extras: [
+      {
+        nome: "Colina de Filopapo",
+        tipo: "vista",
+        linha: "A Acrópole vista de frente, sem multidões",
+        maps: "Philopappos Hill Athens",
+        historia: "Também chamada Colina das Musas. No topo está o monumento funerário de Filopapo (c. 116 d.C.), um príncipe exilado que se tornou cidadão e benfeitor de Atenas.",
+        factos: [
+          "É de acesso livre e tem caminhos de pedra feitos nos anos 1950 pelo arquiteto Dimitris Pikionis.",
+          "A meio da subida há uma gruta a que chamam a «Prisão de Sócrates», embora seja quase certo que ele não esteve lá.",
+          "É dos melhores sítios para fotografar o Parthenon inteiro."
+        ],
+        dica: "Fica do outro lado da rua Dionysiou Areopagitou, em frente à Acrópole. Ótima ao pôr do sol."
+      },
+      {
+        nome: "Loukoumades",
+        tipo: "comida",
+        linha: "Os «donuts» gregos, para depois do jantar",
+        semMapa: true,
+        historia: "Bolinhas de massa frita, estaladiças por fora e fofas por dentro, regadas com mel e canela. É dos doces mais antigos do mundo.",
+        factos: [
+          "O poeta Calímaco (séc. III a.C.) já falava de bolinhos fritos com mel dados aos vencedores dos Jogos.",
+          "Hoje há com chocolate, pistácio ou gelado, mas a versão clássica é só mel, canela e nozes."
+        ],
+        dica: "Há várias casas especializadas em Monastiraki e Psyri."
+      }
     ]
   },
   {
@@ -455,6 +576,33 @@ const DIAS = [
           "Entrada paga, com espreguiçadeiras."
         ],
         dica: "Opcional, se sobrar a manhã livre."
+      }
+    ],
+    extras: [
+      {
+        nome: "Minas de Láurio",
+        tipo: "museu",
+        linha: "A prata que salvou Atenas",
+        maps: "Lavrio Athens",
+        historia: "Em 483 a.C. Atenas encontrou um grande filão de prata aqui. Temístocles convenceu a cidade a gastar o dinheiro em 200 navios de guerra. Três anos depois, essa frota venceu os persas em Salamina.",
+        factos: [
+          "As minas eram trabalhadas por milhares de escravos em galerias estreitas.",
+          "A prata pagou também as famosas moedas com a coruja de Atena.",
+          "A vila de Lavrio fica a 10 km do Cabo Súnio, no caminho."
+        ],
+        dica: "Se forem de carro, dá para parar. Se forem de excursão, contem a história no autocarro!"
+      },
+      {
+        nome: "Praias da Riviera de Atenas",
+        tipo: "vista",
+        linha: "Um mergulho no Egeu antes do pôr do sol",
+        maps: "Legrena beach Sounion",
+        factos: [
+          "Em outubro a água ainda está por volta dos 22 °C.",
+          "Logo abaixo do templo há pequenas praias, como Legrena e a baía do Súnio.",
+          "No caminho de volta, Varkiza e Vouliagmeni têm praias com bares."
+        ],
+        dica: "Levem fato de banho e toalha na mochila."
       }
     ]
   },
@@ -529,6 +677,46 @@ const DIAS = [
         ],
         dica: "Melhor ao fim da tarde e à noite. Última noite: aproveitem!"
       }
+    ],
+    extras: [
+      {
+        nome: "Kerameikos",
+        tipo: "monumento",
+        linha: "O cemitério da Atenas antiga",
+        maps: "Kerameikos Archaeological Site",
+        historia: "Bairro dos oleiros («keramos» = barro, daí a palavra cerâmica) e principal cemitério da cidade. Era aqui que começava a procissão das Panateneias até à Acrópole.",
+        factos: [
+          "Ainda se vêem as muralhas e a Porta Dípilon, a entrada principal da cidade antiga.",
+          "Foi perto daqui que Péricles fez o famoso discurso fúnebre em honra dos mortos da guerra (431 a.C.).",
+          "Há túmulos com relevos de despedidas de família, muito comoventes."
+        ],
+        dica: "Fica entre Thissio e Gazi, mesmo no caminho. É calmo e tem tartarugas."
+      },
+      {
+        nome: "Colina da Pnyx",
+        tipo: "vista",
+        linha: "O parlamento ao ar livre da democracia",
+        maps: "Pnyx Athens",
+        historia: "Era aqui que se reunia a Assembleia dos cidadãos de Atenas a partir do séc. V a.C. Qualquer cidadão podia subir à tribuna de pedra e falar.",
+        factos: [
+          "A tribuna (bema), talhada na rocha, ainda lá está.",
+          "Discursaram aqui Péricles, Temístocles e Demóstenes.",
+          "As reuniões juntavam cerca de 6 000 cidadãos."
+        ],
+        dica: "Fica ao lado de Thissio. Subam à tribuna e olhem para a Acrópole: era a vista de quem discursava."
+      },
+      {
+        nome: "Rua Evripidou",
+        tipo: "comida",
+        linha: "A rua das especiarias, ao lado do mercado",
+        maps: "Evripidou street Athens",
+        factos: [
+          "Lojas antigas com sacos de orégãos, açafrão, chás de montanha e ervas secas.",
+          "Bom sítio para comprar chá da montanha (tsai tou vounou) e mastiha de Quios.",
+          "Tem o nome do dramaturgo Eurípides."
+        ],
+        dica: "Fica a uma rua do Mercado Central. Juntem as duas visitas."
+      }
     ]
   },
   {
@@ -551,6 +739,172 @@ const DIAS = [
           "Se 4:40 é a hora do voo, saiam do hotel por volta das 2h30."
         ],
         dica: "Façam o check-in online e deixem as malas prontas na quinta à noite."
+      }
+    ],
+    extras: [
+      {
+        nome: "Lembranças para levar",
+        tipo: "dica",
+        linha: "O que vale a pena trazer de Atenas",
+        semMapa: true,
+        factos: [
+          "Azeite e azeitonas Kalamata, mel de tomilho, orégãos secos.",
+          "Mastiha de Quios (resina usada em doces e licor) e pistácio de Égina.",
+          "Ouzo ou tsipouro.",
+          "Mati: o olho azul contra o mau-olhado, à venda em todo o lado."
+        ],
+        dica: "Líquidos (azeite, mel, ouzo) têm de ir na mala de porão."
+      }
+    ]
+  },
+  {
+    id: "mito",
+    curto: "⚡ Mitos",
+    titulo: "Mitologia grega",
+    resumo: "Histórias curtas para contar ao pé dos sítios onde aconteceram.",
+    semVisto: true,
+    locais: [
+      {
+        nome: "Os 12 Olímpicos",
+        tipo: "mito",
+        linha: "Quem é quem no Monte Olimpo",
+        semMapa: true,
+        factos: [
+          "Zeus: rei dos deuses, céu e trovão · Hera: mulher de Zeus, casamento",
+          "Poseidon: mar e terramotos · Deméter: colheitas",
+          "Atena: sabedoria e guerra, protetora de Atenas · Apolo: sol, música e profecia",
+          "Ártemis: caça, irmã gémea de Apolo · Ares: guerra violenta",
+          "Afrodite: amor e beleza · Hefesto: fogo e ferreiros",
+          "Hermes: mensageiro, comércio e viajantes · Dionísio: vinho e teatro"
+        ],
+        dica: "Hades, deus do submundo, é irmão de Zeus, mas não vive no Olimpo."
+      },
+      {
+        nome: "Atena contra Poseidon",
+        tipo: "mito",
+        linha: "Como Atenas ganhou o nome",
+        maps: "Erechtheion Athens",
+        historia: "Os dois deuses quiseram ser patronos da cidade. Poseidon bateu com o tridente na rocha e fez brotar uma fonte, mas de água salgada. Atena fez nascer uma oliveira. Os cidadãos escolheram a oliveira, e a cidade ficou com o nome dela.",
+        factos: [
+          "O sítio exato é o Erecteion, na Acrópole. Ainda lá está uma oliveira.",
+          "O frontão oeste do Parthenon mostrava esta disputa."
+        ]
+      },
+      {
+        nome: "Atena nasce da cabeça de Zeus",
+        tipo: "mito",
+        linha: "Já adulta e de armadura",
+        semMapa: true,
+        historia: "Zeus engoliu a primeira mulher, Métis, com medo de uma profecia. Começou a ter dores de cabeça terríveis. Hefesto abriu-lhe a cabeça com um machado e de lá saiu Atena, adulta, armada e a gritar.",
+        factos: [
+          "O símbolo de Atena é a coruja, sinal de sabedoria.",
+          "Procurem nas moedas de 1 € gregas: têm a coruja das moedas da Atenas antiga."
+        ]
+      },
+      {
+        nome: "Teseu e o Minotauro",
+        tipo: "mito",
+        linha: "O herói de Atenas e o Mar Egeu",
+        maps: "Temple of Poseidon Sounion",
+        historia: "Atenas tinha de mandar 14 jovens a Creta para serem comidos pelo Minotauro, metade homem, metade touro, preso num labirinto. Teseu ofereceu-se, matou o monstro e saiu graças ao fio que lhe deu a princesa Ariadne.",
+        factos: [
+          "Prometeu ao pai, o rei Egeu, trocar as velas negras por brancas se voltasse vivo. Esqueceu-se.",
+          "Egeu viu as velas negras do Cabo Súnio e atirou-se ao mar, que passou a chamar-se Egeu.",
+          "O Templo de Hefesto mostra os feitos de Teseu, por isso lhe chamam Theseion."
+        ]
+      },
+      {
+        nome: "Cronos e a pedra",
+        tipo: "mito",
+        linha: "Como Zeus chegou a rei",
+        semMapa: true,
+        historia: "O titã Cronos sabia que um filho o ia destronar, por isso engolia cada bebé que nascia. A mulher, Reia, escondeu Zeus em Creta e deu a Cronos uma pedra embrulhada em panos. Ele engoliu-a sem reparar.",
+        factos: [
+          "Já adulto, Zeus obrigou o pai a vomitar os irmãos: Hera, Poseidon, Hades, Deméter e Héstia.",
+          "Seguiram-se 10 anos de guerra entre deuses e titãs, a Titanomaquia.",
+          "O Templo de Zeus Olímpico, em Atenas, foi dedicado a ele como vencedor."
+        ]
+      },
+      {
+        nome: "Prometeu e o fogo",
+        tipo: "mito",
+        linha: "O titã que se pôs do lado dos humanos",
+        semMapa: true,
+        historia: "Prometeu roubou o fogo aos deuses e deu-o aos humanos. Como castigo, Zeus acorrentou-o a um rochedo, onde uma águia lhe comia o fígado todos os dias. O fígado voltava a crescer todas as noites.",
+        factos: [
+          "Foi libertado séculos depois por Héracles (Hércules).",
+          "A chama olímpica, acesa em Olímpia com os raios do sol, lembra este mito. É entregue no Estádio Panatenaico."
+        ]
+      },
+      {
+        nome: "A caixa de Pandora",
+        tipo: "mito",
+        linha: "Que afinal era um jarro",
+        semMapa: true,
+        historia: "Para castigar os humanos pelo fogo, Zeus criou Pandora, a primeira mulher, e deu-lhe um jarro fechado. Ela abriu-o por curiosidade e soltou todos os males do mundo. Só a esperança ficou lá dentro.",
+        factos: [
+          "No grego original é um «pithos», um jarro grande. A «caixa» vem de um erro de tradução do séc. XVI.",
+          "No Museu Arqueológico há pithoi enormes, do tamanho de uma pessoa."
+        ]
+      },
+      {
+        nome: "Perséfone e as estações",
+        tipo: "mito",
+        linha: "Porque é que há inverno",
+        maps: "Archaeological Site of Eleusis",
+        historia: "Hades raptou Perséfone, filha de Deméter, para o submundo. Deméter ficou de luto e nada mais cresceu na terra. Zeus obrigou Hades a devolvê-la, mas ela tinha comido sementes de romã, e quem come no submundo tem de voltar.",
+        factos: [
+          "Passa parte do ano com Hades (inverno) e o resto com a mãe (primavera e verão).",
+          "Em Elêusis, a 20 km de Atenas, celebravam-se os Mistérios de Elêusis em sua honra. Revelar os segredos dava pena de morte.",
+          "A romã ainda é símbolo de sorte na Grécia: parte-se uma no Ano Novo."
+        ]
+      },
+      {
+        nome: "Hefesto, o deus coxo",
+        tipo: "mito",
+        linha: "O ferreiro dos deuses",
+        maps: "Temple of Hephaestus Athens",
+        historia: "Foi atirado do Olimpo (por Hera ou por Zeus, depende da versão) e ficou coxo. Mesmo assim casou com Afrodite, a mais bela das deusas, que o traía com Ares.",
+        factos: [
+          "Apanhou os dois amantes com uma rede invisível de bronze e chamou os deuses todos para se rirem deles.",
+          "Fez os raios de Zeus, o capacete de Hermes e a armadura de Aquiles.",
+          "O templo dele em Atenas é o mais bem conservado da Grécia."
+        ]
+      },
+      {
+        nome: "Medusa e Perseu",
+        tipo: "mito",
+        linha: "O olhar que transformava em pedra",
+        semMapa: true,
+        historia: "Medusa tinha serpentes em vez de cabelo e quem a olhasse virava pedra. Perseu cortou-lhe a cabeça olhando só para o reflexo no escudo polido que Atena lhe emprestou.",
+        factos: [
+          "Perseu ofereceu a cabeça a Atena, que a pôs no escudo (a égide).",
+          "Por isso a cabeça de Medusa aparece em tantas peças nos museus, para afastar o mal."
+        ]
+      },
+      {
+        nome: "Dédalo e Ícaro",
+        tipo: "mito",
+        linha: "Voar perto demais do sol",
+        semMapa: true,
+        historia: "Dédalo, o génio ateniense que construiu o labirinto do Minotauro, ficou preso em Creta com o filho Ícaro. Fez asas de penas e cera para fugirem. Ícaro subiu demasiado, a cera derreteu e caiu ao mar.",
+        factos: [
+          "O mar onde caiu chama-se Mar Icário, perto da ilha de Icária.",
+          "Dédalo era de Atenas, da família real de Erecteu."
+        ]
+      },
+      {
+        nome: "Palavras que vêm dos mitos",
+        tipo: "mito",
+        linha: "Usamo-las todos os dias sem saber",
+        semMapa: true,
+        factos: [
+          "Pânico: de Pã, deus dos pastores, que assustava os viajantes com gritos.",
+          "Eco: ninfa castigada a só repetir as últimas palavras dos outros.",
+          "Narcisismo: Narciso apaixonou-se pelo próprio reflexo na água.",
+          "Museu e música: das Musas, deusas das artes.",
+          "Calcanhar de Aquiles, trabalho hercúleo, odisseia, cavalo de Troia, titânico."
+        ]
       }
     ]
   }
